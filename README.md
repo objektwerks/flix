@@ -19,3 +19,7 @@ function flix() {
 Run
 ---
 * java -jar flix.jar src/Main.flix
+
+Resources
+---------
+* [Flix Language](https://flix.dev/)
