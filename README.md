@@ -51,7 +51,7 @@ flix> :h
 
 flix>
 ```
->At this time, most commands fail with this message: ***Package commands are currently not available from the shell***
+>Most commands fail with this message: ***Package commands are currently not available from the shell***
 
 Run
 ---
