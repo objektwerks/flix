@@ -8,14 +8,14 @@ VScode
 
 Commandline
 -----------
->Setup .bashrc or .zprofile:
+>Setup environment ( via .bashrc, .zprofile, etc ) as:
 ```
 export FLIX_JAR="/Users/tripletail/Library/Application Support/Code - Insiders/User/globalStorage/flix.flix/flix.jar"
 function flix() {
   java -jar $FLIX_JAR
 }
 ```
->From commandline enter: **flix**
+>From project root enter: **flix**
 
 Run
 ---
