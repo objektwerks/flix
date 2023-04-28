@@ -55,6 +55,7 @@ flix>
 
 Run
 ---
+>The Flix build tool / repl needs a **run** command.
 * java -jar $FLIX_JAR src/Main.flix
 
 Resources
