@@ -15,7 +15,7 @@ function flix() {
   java -jar $FLIX_JAR
 }
 ```
->From commandline: flix
+>From commandline enter: **flix**
 
 Run
 ---
