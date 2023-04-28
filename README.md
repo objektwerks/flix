@@ -55,7 +55,7 @@ flix>
 
 Run
 ---
-* java -jar flix.jar src/Main.flix
+* java -jar $FLIX_JAR src/Main.flix
 
 Resources
 ---------
