@@ -1,2 +1,3 @@
-# flix
-Flix apps and feature tests.
+Flix
+----
+>Flix apps and feature tests.
