@@ -1,1 +1,1 @@
-def main(): Unit \ IO = println("Hello World!")
+def main(): Unit \ IO = println("Hello, Flix!")
