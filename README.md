@@ -2,12 +2,13 @@ Flix
 ----
 >Flix apps and feature tests.
 
-Install
--------
+VScode
+------
+>Install Flix extension: https://marketplace.visualstudio.com/items?itemName=flix.flix
 
 Commandline
 -----------
->Setup bashrc or .zprofile:
+>Setup .bashrc or .zprofile:
 ```
 export FLIX_JAR="/Users/tripletail/Library/Application Support/Code - Insiders/User/globalStorage/flix.flix/flix.jar"
 function flix() {
