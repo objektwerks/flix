@@ -5,6 +5,7 @@ Flix
 VScode
 ------
 >Install Flix extension: https://marketplace.visualstudio.com/items?itemName=flix.flix
+>Source file embedded command, **Run**, works correctly. **Run Tests** does not.
 
 Commandline
 -----------
