@@ -3,7 +3,7 @@ use Assert.eq
 @Test
 def testList(): Bool =
     use List.sum;
-    let list = (1 :: 2 :: 3 :: Nil);
+    let list = List#{1, 2, 3};
     eq( list |> sum, 6 )
 
 @Test
