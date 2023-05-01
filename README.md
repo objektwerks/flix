@@ -60,7 +60,7 @@ Build
 
 Run
 ---
->The Flix build tool / repl needs a **run-main** command.
+>The Flix commandline tool needs a **run-main** command.
 * java -jar $FLIX_JAR src/Main.flix
 
 Package
