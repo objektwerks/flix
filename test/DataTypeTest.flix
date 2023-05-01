@@ -12,6 +12,10 @@ def valueOf(color: Color): Int32 = match color {
     case Color.Blue(i) => i * 2
 }
 
+type alias First = String
+type alias Last = String
+type alias Age = Int32
+
 @Test
 def testTuple(): Bool =
     let tuple = (1, 2, 3);
