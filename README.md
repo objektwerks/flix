@@ -53,6 +53,11 @@ flix>
 ```
 >Most commands currently fail with this message: ***Package commands are currently not available from the shell***
 
+Build
+-----
+>Currently this command fails.
+* flix> :build
+
 Run
 ---
 >The Flix build tool / repl needs a **run-main** command.
