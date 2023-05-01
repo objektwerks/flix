@@ -14,12 +14,12 @@ Commandline
 -----------
 >Setup environment ( via .bashrc, .zprofile, etc ) as:
 ```
-export FLIX_JAR="/Users/tripletail/Library/Application Support/Code - Insiders/User/globalStorage/flix.flix/flix.jar"
+export FLIX_JAR="/location/of/flix.jar"
 function flix() {
   java -jar $FLIX_JAR
 }
 ```
->From project root enter: **flix**
+>From project root enter command: **flix**
 ```
 Found `flix.toml'. Checking dependencies...
 Resolving Flix dependencies...
@@ -51,7 +51,7 @@ flix> :h
 
 flix>
 ```
->Most commands fail with this message: ***Package commands are currently not available from the shell***
+>Most commands currently fail with this message: ***Package commands are currently not available from the shell***
 
 Run
 ---
