@@ -1,10 +1,10 @@
 def main(): Unit \ IO =
-    let args = Environment.getArgs();
     let env = "Environment:";
+    let args = Environment.getArgs();
     println("${env} ${args}");
-    
+
     let greeting = "Greeting:";
     match args {
-        case Nil => println("${greeting} Hello, Flix!")
-        case head :: _ => println("${greeting} Hello, ${head}!")
-    }
+        case Nil => "${greeting} Hello, Flix!"
+        case head :: _ => "${greeting} Hello, ${head}!"
+    } |> println
