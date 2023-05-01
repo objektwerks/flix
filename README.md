@@ -64,6 +64,12 @@ Client at '/127.0.0.1:57961' connected.
 Flix 0.35.0 Ready! (Extension: 1.0.0) (Using /location/of/flix.jar)
 ```
 
+Check
+-----
+>Currently this command fails.
+* flix> :check
+>Designed to validate project source. But the LSP appears to do the same after each source modification.
+
 Build
 -----
 >Currently this command fails.
