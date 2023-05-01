@@ -61,3 +61,4 @@ Run
 Resources
 ---------
 * [Flix Language](https://flix.dev/)
+* [Flix Book](https://doc.flix.dev/introduction.html)
