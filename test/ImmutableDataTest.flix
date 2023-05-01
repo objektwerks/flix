@@ -24,7 +24,13 @@ def testMap(): Bool =
     eq( get(4, modifiedMap), Some(4) )
 
 @Test
+def testVector(): Bool =
+    use Vector.sum;
+    let vector = Vector#{1, 2, 3};
+    eq( vector |> sum, 6 )
+
+@Test
 def testChain(): Bool =
     use Chain.sum;
     let chain = Chain.cons(1, Chain.empty());
-    eq( chain |> sum, 1)
+    eq( chain |> sum, 1 )
