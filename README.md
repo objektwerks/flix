@@ -21,8 +21,8 @@ Flix 0.35.0 Ready! (Extension: 1.0.0) (Using /location/of/flix.jar)
 ```
 >The Flix commandline tool is **also** started.
 
-Commandline
------------
+Flix Commandline Tool
+---------------------
 >Setup environment ( via .bashrc, .zprofile, etc ) as:
 ```
 export FLIX_JAR="/location/of/flix.jar"
