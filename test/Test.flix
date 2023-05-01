@@ -8,3 +8,6 @@ def testSubstract(): Bool = eq(2 - 1, 1)
 
 @Test
 def testMultiply(): Bool = eq(2 * 2, 4)
+
+@Test
+def testDivide(): Bool = eq(4 / 2, 2)
