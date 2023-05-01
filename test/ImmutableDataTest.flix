@@ -34,3 +34,8 @@ def testChain(): Bool =
     use Chain.sum;
     let chain = Chain.cons(1, Chain.empty());
     eq( chain |> sum, 1 )
+
+@Test
+def testRecord(): Bool =
+    let record = { x = 1, y = 2, z = 3 };
+    eq( record.x + record.y + record.z, 6 )
