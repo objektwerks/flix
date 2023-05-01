@@ -12,14 +12,14 @@ VScode
 
 Flix LSP
 --------
->When a Flix source file is selected for the first time, the Flix LSP is run:
+>When a Flix source file is selected for the first time, the Flix LSP is run ( see output tab ):
 ```
 Listen on 'localhost/127.0.0.1:8888'.
 Client at '/127.0.0.1:57961' connected.
                                                                                 
 Flix 0.35.0 Ready! (Extension: 1.0.0) (Using /location/of/flix.jar)
 ```
->The Flix commandline tool is **also** started.
+>The Flix commandline tool is **also** started ( see terminal tab ).
 
 Flix Commandline Tool
 ---------------------
@@ -30,7 +30,7 @@ function flix() {
   java -jar $FLIX_JAR
 }
 ```
->From project root enter command: **flix**
+>From project root enter command: **flix** ( allowing for manual start, in addition to LSP auto start )
 ```
 Found `flix.toml'. Checking dependencies...
 Resolving Flix dependencies...
@@ -71,7 +71,7 @@ Check
 * flix> :check
 >Validates project source; but doesn't generate class files.
 
->**Note**, the Flix LSP parses and validates source after each modification ( see terminal output tab ).
+>**Note**, the Flix LSP parses and validates source after each modification ( see output tab ).
 
 Build
 -----
