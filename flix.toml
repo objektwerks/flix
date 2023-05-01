@@ -1,6 +1,6 @@
 [package]
-name        = "flix-main"
-description = "Main"
+name        = "flix"
+description = "Flix apps and feature tests."
 version     = "0.1.0"
 flix        = "0.35.0"
 license     = "Apache-2.0"
