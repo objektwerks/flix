@@ -1,2 +1,3 @@
-def main(): Unit \ IO =
-    println("Hello, Flix!")
+def main(): Unit \ IO = {
+    println("Greeting: Hello, Flix!\nEnvironment: ${Environment.getArgs()}")
+}
