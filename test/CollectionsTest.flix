@@ -14,9 +14,11 @@ def testSet(): Bool =
 
 @Test
 def testMap(): Bool =
-    use Map.{get, sumKeys, sumValues};
+    use Map.{get, insert, sumKeys, sumValues};
     let map = Map#{1 => 1, 2 => 2, 3 => 3};
     let keysSum = sumKeys(map);
     let valuesSum = sumValues(map);
+    let modifiedMap = insert(4, 4, map);
     eq( keysSum, valuesSum ) and
-    eq( get(1, map), Some(1) )
+    eq( get(1, map), Some(1) ) and
+    eq( get(4, modifiedMap), Some(4) )
