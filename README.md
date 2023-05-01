@@ -68,7 +68,7 @@ Check
 -----
 >Currently this command fails.
 * flix> :check
->Designed to validate project source. But the LSP appears to do the same after each source modification.
+>Validates project source. Yet the Flix LSP appears to do the same after each source modification.
 
 Build
 -----
