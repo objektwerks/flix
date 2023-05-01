@@ -14,8 +14,9 @@ def testSet(): Bool =
 
 @Test
 def testMap(): Bool =
-    use Map.{sumKeys, sumValues};
+    use Map.{get, sumKeys, sumValues};
     let map = Map#{1 => 1, 2 => 2, 3 => 3};
     let keysSum = sumKeys(map);
     let valuesSum = sumValues(map);
-    eq( keysSum, valuesSum )
+    eq( keysSum, valuesSum ) and
+    eq( get(1, map), Some(1) )
