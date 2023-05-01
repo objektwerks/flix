@@ -63,6 +63,14 @@ Run
 >The Flix build tool / repl needs a **run-main** command.
 * java -jar $FLIX_JAR src/Main.flix
 
+Package
+-------
+* flix> :build-jar
+
+Execute
+-------
+* java -jar artifact/project.jar
+
 Resources
 ---------
 * [Flix Language](https://flix.dev/)
