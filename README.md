@@ -33,8 +33,9 @@ Dependency resolution completed.
    |  _| | | | | \ \/ /     Enter an expression to have it evaluated.
    | |   | | | |  >  <      Type ':help' for more information.
    |_|   |_| |_| /_/\_\     Type ':quit' or press 'ctrl + d' to exit.
-      
-flix> :h                                                                        
+```
+> flix> :help
+```
   Command       Arguments     Purpose
 
   :reload :r                  Recompiles every source file.
