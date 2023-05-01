@@ -16,6 +16,9 @@ type alias First = String
 type alias Last = String
 type alias Age = Int32
 
+def toString(person: { first = First, last = Last, age = Age } ): String =
+    "${person.first}, ${person.last}, ${person.age}"
+
 @Test
 def testTuple(): Bool =
     let tuple = (1, 2, 3);
@@ -30,3 +33,8 @@ def testEnum(): Bool =
     eq( valueOf(red), 2 ) and
     eq( valueOf(white), 4 ) and
     eq( valueOf(blue), 6 )
+
+@Test
+def testTypeAlias(): Bool =
+    let person = { first = "Fred", last = "Flintstone", age = 30 };
+    eq( toString(person), "Fred, Flintstone, 30" )
