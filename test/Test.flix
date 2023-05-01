@@ -1,5 +1,7 @@
-@Test
-def add(): Bool = 1 + 1 == 2
+use Assert.eq
 
 @Test
-def substract(): Bool = 2 - 1 == 1
+def add(): Bool = eq(1 + 1, 2)
+
+@Test
+def substract(): Bool = eq(2 - 1, 1)
