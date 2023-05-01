@@ -54,6 +54,16 @@ flix>
 ```
 >Most commands currently fail with this message: ***Package commands are currently not available from the shell***
 
+LSP
+---
+>When a Flix source file is selected for the first time, the Flix LSP is run:
+```
+Listen on 'localhost/127.0.0.1:8888'.
+Client at '/127.0.0.1:57961' connected.
+                                                                                
+Flix 0.35.0 Ready! (Extension: 1.0.0) (Using /location/of/flix.jar)
+```
+
 Build
 -----
 >Currently this command fails.
