@@ -63,7 +63,7 @@ Dependency resolution completed.
 
 flix>
 ```
->Most commands currently fail with this message: ***Package commands are currently not available from the shell***
+>Currently most commands fail with this message: ***Package commands are currently not available from the shell***
 
 Check
 -----
