@@ -83,6 +83,12 @@ Build
 >Currently this command fails.
 * flix> :build
 
+Test
+----
+>Currently this command fails.
+* flix> :test
+>But this does work: java -jar $FLIX_JAR test
+
 Run
 ---
 >The Flix commandline tool needs a **run-main** command.
