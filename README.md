@@ -68,7 +68,9 @@ Check
 -----
 >Currently this command fails.
 * flix> :check
->Validates project source. The Flix LSP does same after each source modification ( see terminal output tab ).
+>Validates project source; but doesn't generate class files.
+
+>**Note**, the Flix LSP parses and validates source after each modification ( see terminal output tab ).
 
 Build
 -----
