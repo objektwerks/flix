@@ -15,3 +15,9 @@ def testIfElse(): Bool =
 def testRecursion(): Bool =
     let list = List#{1, 2, 3};
     eq( sum(list, 0), 6 )
+
+@Test
+def testForeachYield(): Bool =
+    let list = List#{1, 2, 3};
+    let result: List[Int32] = foreach(number <- list) yield number + 1;
+    eq( result, List#{2, 3, 4})
