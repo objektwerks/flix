@@ -42,3 +42,15 @@ def testMutList(): Bool =
             MutList.push!(3);
         eq( numbers |> sum, 6 )
     }
+
+@Test
+def testMutSet(): Bool =
+    use MutSet.sum;
+    region rc {
+        let numbers = 
+            MutSet.new(rc) !> 
+            MutSet.add!(1) !> 
+            MutSet.add!(2) !>
+            MutSet.add!(3);
+        eq( numbers |> sum, 6 )
+    }
