@@ -38,7 +38,7 @@ def testMonadicForYieldWithGuard(): Bool =
     let expected = (1, 2) :: Nil;
     eq( result, expected )
 
-@Test
+@Test // List("1", "2", "3", "four").flatMap(_.toIntOption).sum
 def testOption(): Bool =
     use List.sum;
     let strings = List#{"1", "2", "3", "four"};
