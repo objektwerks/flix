@@ -21,3 +21,11 @@ def testForeachYield(): Bool =
     let list = List#{1, 2, 3};
     let result: List[Int32] = foreach(number <- list) yield number + 1;
     eq( result, List#{2, 3, 4})
+
+@Test
+def testMonadicForYield(): Bool =
+    let list1 = 1 :: 2 :: Nil;
+    let list2 = 1 :: 2 :: Nil;
+    let result: List[(Int32, Int32)] = forM (x <- list1; y <- list2) yield (x, y);
+    let expected = (1, 1) :: (1, 2) :: (2, 1) :: (2, 2) :: Nil;
+    eq( result, expected)
