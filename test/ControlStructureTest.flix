@@ -40,3 +40,6 @@ def testMonadicForYieldWithGuard(): Bool =
 
 @Test
 def testOption(): Bool = true
+
+@Test
+def testResult(): Bool = true
