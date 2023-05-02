@@ -22,3 +22,11 @@ def testReference(): Bool =
         counter := (deref counter) + 1;
         eq( deref counter, 3 )
     }
+
+@Test
+def testArray(): Bool =
+    use Array.sum;
+    region rc {
+        let array = Array.repeat(rc, 3, 1);
+        eq( array |> sum, 3)
+    }
