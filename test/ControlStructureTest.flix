@@ -5,6 +5,8 @@ def sum(ys: List[Int32], acc: Int32): Int32 = match ys {
     case head :: tail => sum(tail, acc + head)
 }
 
+def toInt(s: String): Option[Int32] = Int32.fromString(s)
+
 @Test
 def testIfElse(): Bool =
     let number = 2;
