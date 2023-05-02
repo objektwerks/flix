@@ -5,8 +5,6 @@ def sum(ys: List[Int32], acc: Int32): Int32 = match ys {
     case head :: tail => sum(tail, acc + head)
 }
 
-def toInt(s: String): Option[Int32] = Int32.fromString(s)
-
 @Test
 def testIfElse(): Bool =
     let number = 2;
@@ -41,7 +39,14 @@ def testMonadicForYieldWithGuard(): Bool =
     eq( result, expected )
 
 @Test
-def testOption(): Bool = true
+def testOption(): Bool =
+    use List.sum;
+    let strings = List#{"1", "2", "3", "four"};
+    let result: List[Int32] = forM (
+         s <- strings;
+         i <- Int32.fromString(s)
+    ) yield i;
+    eq( result |> sum, 6)
 
 @Test
 def testResult(): Bool = true
