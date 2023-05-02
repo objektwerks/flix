@@ -30,3 +30,15 @@ def testArray(): Bool =
         let array = Array.repeat(rc, 3, 1);
         eq( array |> sum, 3)
     }
+
+@Test
+def testMutList(): Bool =
+    use MutList.sum;
+    region rc {
+        let numbers = 
+            MutList.new(rc) !> 
+            MutList.push!(1) !> 
+            MutList.push!(2) !>
+            MutList.push!(3);
+        eq( numbers |> sum, 6 )
+    }
