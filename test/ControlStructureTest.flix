@@ -37,3 +37,6 @@ def testMonadicForYieldWithGuard(): Bool =
     let result: List[(Int32, Int32)] = forM (x <- list1; y <- list2; if x < y) yield (x, y);
     let expected = (1, 2) :: Nil;
     eq( result, expected )
+
+@Test
+def testOption(): Bool = true
