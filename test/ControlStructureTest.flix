@@ -64,7 +64,7 @@ def testResult(): Bool \ IO =
 def numberOfWords(s: String): Int32 = s |> String.words |> List.length
 
 @Test
-def testApplicative(): Bool =
+def testApplicativeForYield(): Bool =
     let optionX = Some(1);
     let optionY = Some(2);
     let result = forA(x <- optionX; y <- optionY) yield x + y;
