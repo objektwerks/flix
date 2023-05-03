@@ -46,4 +46,23 @@ def testOption(): Bool =
     eq( result, 6 ) and eq( anotherResult, 6 )
 
 @Test
-def testResult(): Bool = true
+def testResult(): Bool \ IO =
+    let file = "./LICENSE";
+    let result = 
+        for (
+            lines <- File.readLines(file) |> Result.mapErr(_ -> "Failed to read: ${file}")
+        ) yield {
+            let totalLines = List.length(lines);
+            let totalWords = List.sumWith(numberOfWords, lines);
+            (totalLines, totalWords)
+        };
+    match result {
+        case Ok((lines, words)) =>
+            debug("Lines: ${lines}, Words: ${words}");
+            eq( lines, 201 ) and eq( words, 1581 )
+        case Err(message) =>
+            debug(message);
+            false
+    }
+
+def numberOfWords(s: String): Int32 = s |> String.words |> List.length
