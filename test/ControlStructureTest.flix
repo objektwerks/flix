@@ -57,12 +57,8 @@ def testResult(): Bool \ IO =
             (totalLines, totalWords)
         };
     match result {
-        case Ok((lines, words)) =>
-            debug("Lines: ${lines}, Words: ${words}");
-            eq( lines, 201 ) and eq( words, 1581 )
-        case Err(message) =>
-            debug(message);
-            false
+        case Ok((lines, words)) => eq( lines, 201 ) and eq( words, 1581 )
+        case Err(message) => debug(message); false
     }
 
 def numberOfWords(s: String): Int32 = s |> String.words |> List.length
