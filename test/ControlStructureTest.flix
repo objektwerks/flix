@@ -39,6 +39,13 @@ def testMonadicForYieldWithGuard(): Bool =
     eq( result, expected )
 
 @Test
+def testApplicativeForYield(): Bool =
+    let optionX = Some(1);
+    let optionY = Some(2);
+    let result = forA(x <- optionX; y <- optionY) yield x + y;
+    eq( result, Some(3) )
+
+@Test
 def testOption(): Bool =
     // Scala: val result = List("1", "2", "3", "four").flatMap(_.toIntOption).sum
     let result = List.filterMap(s -> Int32.fromString(s), List#{"1", "2", "3", "four"}) |> List.sum;
@@ -62,10 +69,3 @@ def testResult(): Bool \ IO =
     }
 
 def numberOfWords(s: String): Int32 = s |> String.words |> List.length
-
-@Test
-def testApplicativeForYield(): Bool =
-    let optionX = Some(1);
-    let optionY = Some(2);
-    let result = forA(x <- optionX; y <- optionY) yield x + y;
-    eq( result, Some(3) )
