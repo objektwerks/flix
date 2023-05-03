@@ -40,13 +40,8 @@ def testMonadicForYieldWithGuard(): Bool =
 
 @Test // List("1", "2", "3", "four").flatMap(_.toIntOption).sum
 def testOption(): Bool =
-    use List.sum;
-    let strings = List#{"1", "2", "3", "four"};
-    let result: List[Int32] = forM (
-         s <- strings;
-         i <- Int32.fromString(s)
-    ) yield i;
-    eq( result |> sum, 6)
+    let result = List.filterMap(s -> Int32.fromString(s), List#{"1", "2", "3", "four"}) |> List.sum;
+    eq( result, 6 )
 
 @Test
 def testResult(): Bool = true
