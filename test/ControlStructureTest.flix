@@ -38,8 +38,9 @@ def testMonadicForYieldWithGuard(): Bool =
     let expected = (1, 2) :: Nil;
     eq( result, expected )
 
-@Test // Scala: List("1", "2", "3", "four").flatMap(_.toIntOption).sum
+@Test
 def testOption(): Bool =
+    // Scala: val result = List("1", "2", "3", "four").flatMap(_.toIntOption).sum
     let result = List.filterMap(s -> Int32.fromString(s), List#{"1", "2", "3", "four"}) |> List.sum;
     let anotherResult = List.sumWith(s -> Int32.fromString(s) |> Option.getWithDefault(0), List#{"1", "2", "3", "four"});
     eq( result, 6 ) and eq( anotherResult, 6 )
