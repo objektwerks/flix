@@ -36,7 +36,7 @@ function flix() {
   java -jar $FLIX_JAR
 }
 ```
->From project root enter command: **flix** ( allowing for manual start, in addition to LSP auto start )
+>From project root enter command: **flix**, allowing for **manual** start. Flix LSP **auto** start occurs once a Flix source file is selected.
 ```
 Found `flix.toml'. Checking dependencies...
 Resolving Flix dependencies...
