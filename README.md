@@ -94,7 +94,7 @@ Build
 
 Run
 ---
->The Flix commandline tool needs a **run-main** command.
+>Flix needs a **:run** command.
 * java -jar $FLIX_JAR src/Main.flix
 
 Pkg
