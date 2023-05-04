@@ -9,6 +9,11 @@ mod Recursion {
       case _ => fibonacci(n - 1, b, a + b)
     }
 
+    pub def product(ys: List[Int32], acc: Int32): Int32 = match ys {
+        case Nil => acc
+        case head :: tail => sum(tail, acc * head)
+    }
+
     pub def sum(ys: List[Int32], acc: Int32): Int32 = match ys {
         case Nil => acc
         case head :: tail => sum(tail, acc + head)

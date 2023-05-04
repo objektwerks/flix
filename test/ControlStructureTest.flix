@@ -1,5 +1,5 @@
 use Assert.eq
-use Recursion.sum
+use Recursion.{fibonacci, product, sum}
 
 @Test
 def testIfElse(): Bool =
@@ -10,6 +10,8 @@ def testIfElse(): Bool =
 @Test
 def testRecursion(): Bool =
     let list = List#{1, 2, 3};
+    eq( fibonacci(6, 0, 1), 8 ) and
+    eq( product(list, 1), 6 ) and
     eq( sum(list, 0), 6 )
 
 @Test
