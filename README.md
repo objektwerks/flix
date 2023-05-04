@@ -21,22 +21,23 @@ Flix 0.35.0 Ready! (Extension: 1.0.0) (Using /location/of/flix.jar)
 ```
 >The Flix commandline tool is **also** started ( see terminal tab ).
 
-Flix Commandline Tool
----------------------
->The ```flix.jar``` commandline tool is 2 tools in one:
-1. build tool
-2. repl
+Flix LSP Server / Commandline Tool
+----------------------------------
+>The ```flix.jar``` commandline tool is 3 tools in one:
+1. LSP server
+2. build tool
+3. repl
 >The repl can execute expressions such as: ```List.filterMap(s -> Int32.fromString(s), List#{"1", "2", "3", "four"}) |> List.sum```.
 >But ```let x = 1``` expressions fail.
 
->For manual startup, setup an environment file ( such as .bashrc, .zprofile, etc ) as follows:
+>For **manual** startup, edit an environment file ( such as .bashrc, .zprofile, etc ) as follows:
 ```
 export FLIX_JAR="/location/of/flix.jar"
 function flix() {
   java -jar $FLIX_JAR
 }
 ```
->From the project root directory enter: **flix** and return, allowing for **manual** starting of the Flix LSP server.
+>Then, from the project root directory, enter: **flix** and return.
 
 >The Flix LSP server is **auto** started when a Flix source file is selected.
 ```
