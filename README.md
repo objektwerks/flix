@@ -83,17 +83,17 @@ Check
 
 >**Note**, the Flix LSP parses and validates source after each modification ( see output tab ).
 
-Build
------
->Currently this command fails.
-* flix> :build
->But this works: java -jar $FLIX_JAR build
-
 Test
 ----
 >Currently this command fails.
 * flix> :test
 >But this works: java -jar $FLIX_JAR test
+
+Build
+-----
+>Currently this command fails.
+* flix> :build
+>But this works: java -jar $FLIX_JAR build
 
 Run
 ---
