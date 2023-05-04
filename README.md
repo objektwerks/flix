@@ -21,25 +21,6 @@ Flix 0.36.0 Ready! (Extension: 1.0.0) (Using /location/of/flix.jar)
 ```
 >The Flix build-repl commandline tool is **also** started ( see terminal tab ).
 
->When the flix.toml is edited, a Flix restart dialog, reload: yes | no, is displayed.
-
-Flix Jar
---------
->The ```flix.jar``` contains an/a:
-1. LSP server
-2. build-repl commandline tool
->The repl can execute expressions such as: ```List.filterMap(s -> Int32.fromString(s), List#{"1", "2", "3", "four"}) |> List.sum```.
->But ```let x = 1``` expressions fail.
-
->For **manual** Flix startup, edit an environment file ( such as .bashrc, .zprofile, etc ) as follows:
-```
-export FLIX_JAR="/location/of/flix.jar"
-function flix() {
-  java -jar $FLIX_JAR
-}
-```
->Then, from the project root directory, enter: **flix** and return. Note the output and terminal tabs.
-
 ```
 Found `flix.toml'. Checking dependencies...
 Resolving Flix dependencies...
@@ -73,6 +54,25 @@ Dependency resolution completed.
 flix>
 ```
 >Currently most commands fail with this message: ***Package commands are currently not available from the shell***
+
+>When the flix.toml is edited, a Flix restart dialog, reload: yes | no, is displayed.
+
+Flix Jar
+--------
+>The ```flix.jar``` contains an/a:
+1. LSP server
+2. build-repl commandline tool
+>The repl can execute expressions such as: ```List.filterMap(s -> Int32.fromString(s), List#{"1", "2", "3", "four"}) |> List.sum```.
+>But ```let x = 1``` expressions fail.
+
+>For **manual** Flix startup, edit an environment file ( such as .bashrc, .zprofile, etc ) as follows:
+```
+export FLIX_JAR="/location/of/flix.jar"
+function flix() {
+  java -jar $FLIX_JAR
+}
+```
+>Then, from the project root directory, enter: **flix** and return. Note the output and terminal tabs.
 
 Check
 -----
