@@ -25,8 +25,7 @@ Flix Jar
 --------
 >The ```flix.jar``` contains an/a:
 1. LSP server
-2. build commandline tool
-3. repl commandline tool
+2. build-repl commandline tool
 >The repl can execute expressions such as: ```List.filterMap(s -> Int32.fromString(s), List#{"1", "2", "3", "four"}) |> List.sum```.
 >But ```let x = 1``` expressions fail.
 
