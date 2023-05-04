@@ -39,7 +39,9 @@ function flix() {
 ```
 >Then, from the project root directory, enter: **flix** and return.
 
->The ```flix.jar``` is **auto** executed when a Flix source file is selected.
+>The ```flix.jar``` is **auto** loaded when a Flix source file is selected.
+
+>When the flix.toml is edited, ```flix.jar``` restart dialog is displayed.
 ```
 Found `flix.toml'. Checking dependencies...
 Resolving Flix dependencies...
