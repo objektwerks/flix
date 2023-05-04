@@ -5,3 +5,6 @@ version     = "0.1.0"
 flix        = "0.35.0"
 license     = "Apache-2.0"
 authors     = ["Objektwerks <objektwerks@runbox.com>"]
+
+[mvn-dependencies]
+"org.slf4j:slf4j-nop" = "1.7.36"
