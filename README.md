@@ -85,30 +85,30 @@ Check
 
 Test
 ----
->Currently this command fails.
+>Currently this command completes but doesn't run any tests.
 * flix> :test
 >But this works: java -jar $FLIX_JAR test
 
 Build
 -----
->Currently this command fails.
-* flix> :build
->But this works: java -jar $FLIX_JAR build
+* flix> :b
 
 Run
 ---
 >The Flix commandline tool needs a **run-main** command.
 * java -jar $FLIX_JAR src/Main.flix
 
-Package
--------
->Currently this command fails.
-* flix> :build-jar
->But this works: java -jar $FLIX_JAR build-jar
+Pkg
+---
+* flix> :pkg
+
+Jar
+---
+* flix> :jar
 
 Execute
 -------
-* java -jar artifact/project.jar
+* java -jar artifact/flix.jar
 
 Resources
 ---------
