@@ -1,11 +1,9 @@
 use Assert.eq
 
-def isEmpty(list: a): Bool with Empty[a] = Empty.isEmpty(list)
+def isEmpty(x: a): Bool with Empty[a] = Empty.isEmpty(x)
 
 pub class Empty[a] {
     pub def isEmpty(x: a): Bool
-
-    law nonnegative: forall(x: a) . Empty.isEmpty(x) == true
 }
 
 instance Empty[List[a]] {
@@ -13,4 +11,4 @@ instance Empty[List[a]] {
 }
 
 @Test
-def testTypeClass(): Bool = true
+def testTypeClass(): Bool = eq( isEmpty(Nil), true )
