@@ -8,8 +8,8 @@ VScode
 
 1. Command Pallete > flix
 2. Embedded source file commands:
-  * **Run** usually works.
-  * **Run Tests** does not work.
+    * **Run** usually works.
+    * **Run Tests** does not work.
 
 Flix
 ----
