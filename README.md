@@ -21,6 +21,8 @@ Flix 0.36.0 Ready! (Extension: 1.0.0) (Using /location/of/flix.jar)
 ```
 >The Flix build-repl commandline tool is **also** started ( see terminal tab ).
 
+>When the flix.toml is edited, a Flix restart dialog, reload: yes | no, is displayed.
+
 Flix Jar
 --------
 >The ```flix.jar``` contains an/a:
@@ -38,9 +40,6 @@ function flix() {
 ```
 >Then, from the project root directory, enter: **flix** and return. Note the output and terminal tabs.
 
->As note above in the Flix LSP section, Flix is **auto** started when a Flix source file is selected for first time in a new VSCode session.
-
->When the flix.toml is edited, a Flix restart dialog, reload: yes | no, is displayed.
 ```
 Found `flix.toml'. Checking dependencies...
 Resolving Flix dependencies...
