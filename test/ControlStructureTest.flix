@@ -1,9 +1,5 @@
 use Assert.eq
-
-def sum(ys: List[Int32], acc: Int32): Int32 = match ys {
-    case Nil => acc
-    case head :: tail => sum(tail, acc + head)
-}
+use Recursion.sum
 
 @Test
 def testIfElse(): Bool =
