@@ -30,18 +30,18 @@ Flix Jar
 >The repl can execute expressions such as: ```List.filterMap(s -> Int32.fromString(s), List#{"1", "2", "3", "four"}) |> List.sum```.
 >But ```let x = 1``` expressions fail.
 
->For **manual** startup, edit an environment file ( such as .bashrc, .zprofile, etc ) as follows:
+>For **manual** Flix startup, edit an environment file ( such as .bashrc, .zprofile, etc ) as follows:
 ```
 export FLIX_JAR="/location/of/flix.jar"
 function flix() {
   java -jar $FLIX_JAR
 }
 ```
->Then, from the project root directory, enter: **flix** and return.
+>Then, from the project root directory, enter: **flix** and return. Note the output and terminal tabs.
 
->The ```flix.jar``` is **auto** loaded when a Flix source file is selected.
+>Flix is **auto** started when a Flix source file is selected for first time in a new VSCode session.
 
->When the flix.toml is edited, ```flix.jar``` restart dialog is displayed.
+>When the flix.toml is edited, a Flix restart dialog, reload: yes | no, is displayed.
 ```
 Found `flix.toml'. Checking dependencies...
 Resolving Flix dependencies...
