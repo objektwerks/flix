@@ -1,6 +1,6 @@
 Flix
 ----
->Flix apps and feature tests.
+>Flix feature tests.
 
 VScode
 ------
