@@ -19,4 +19,4 @@ def testStructuredConcurrency(): Bool \ IO =
         spawn Channel.send( fileLineCount("./flix.toml"), flixSender ) @ rc;
         (Channel.recv(licenseReceiver), Channel.recv(flixReceiver))
     };
-    eq( license, 201 ) and eq( flix, 7 )
+    eq( license, 201 ) and eq( flix, 10 )
