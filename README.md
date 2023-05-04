@@ -44,7 +44,7 @@ Resolving Maven dependencies...
   Running Maven dependency resolver.
 Dependency resolution completed.
      __   _   _
-    / _| | | (_)            Welcome to Flix 0.35.0
+    / _| | | (_)            Welcome to Flix 0.36.0
    | |_  | |  _  __  __
    |  _| | | | | \ \/ /     Enter an expression to have it evaluated.
    | |   | | | |  >  <      Type ':help' for more information.
