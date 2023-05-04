@@ -77,9 +77,8 @@ function flix() {
 
 Check
 -----
->Currently this command fails.
+>Validates project sources; but doesn't generate class files.
 * flix> :check
->Validates project source; but doesn't generate class files.
 
 >**Note**, the Flix LSP parses and validates source after each modification ( see output tab ).
 
@@ -91,7 +90,7 @@ Test
 
 Build
 -----
-* flix> :b
+* flix> :build
 
 Run
 ---
