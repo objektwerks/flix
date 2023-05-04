@@ -55,7 +55,7 @@ flix>
 ```
 >Currently most commands fail with this message: ***Package commands are currently not available from the shell***
 
->When the flix.toml is edited, a Flix restart dialog, reload: yes | no, is displayed.
+>**Note:** When the flix.toml is edited, a Flix restart dialog, reload: yes | no, is displayed.
 
 Flix Jar
 --------
