@@ -10,9 +10,9 @@ VScode
 * **Run** usually works.
 * **Run Tests** does not work.
 
-Flix LSP
---------
->When a Flix source file is selected for the first time, the Flix LSP is run ( see output tab ):
+Flix
+----
+>When a Flix source file is selected for the first time, the Flix LSP server is started ( see output tab ):
 ```
 Listen on 'localhost/127.0.0.1:8888'.
 Client at '/127.0.0.1:57961' connected.
