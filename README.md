@@ -102,7 +102,9 @@ Run
 
 Package
 -------
+>Currently this command fails.
 * flix> :build-jar
+>But this works: java -jar $FLIX_JAR build-jar
 
 Execute
 -------
