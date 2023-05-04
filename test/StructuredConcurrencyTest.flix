@@ -12,10 +12,9 @@ def fileLineCount(file: String): Int32 \ IO =
 
 @Test
 def testStructuredConcurrency(): Bool \ IO =
-    region rc {
-        // let (sender, receiver) = Channel.unbuffered(rc);
-        spawn fileLineCount("./LICENSE") @ rc;
-        spawn fileLineCount("./README.md") @ rc
+    let lineCount = region rc {
+        let (sender, receiver) = Channel.unbuffered(rc);
+        spawn Channel.send( fileLineCount("./LICENSE"), sender ) @ rc;
+        Channel.recv(receiver)
     };
-    // eq( license, 201 ) and eq( readme, 109)
-    true
+    eq( lineCount, 201 )
