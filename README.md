@@ -100,10 +100,12 @@ Run
 Pkg
 ---
 * flix> :pkg
+> See: artifact/flix.fpkg
 
 Jar
 ---
 * flix> :jar
+> See: artifact/flix.jar
 
 Execute
 -------
