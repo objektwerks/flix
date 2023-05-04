@@ -87,12 +87,13 @@ Build
 -----
 >Currently this command fails.
 * flix> :build
+>But this works: java -jar $FLIX_JAR build
 
 Test
 ----
 >Currently this command fails.
 * flix> :test
->But this does work: java -jar $FLIX_JAR test
+>But this works: java -jar $FLIX_JAR test
 
 Run
 ---
