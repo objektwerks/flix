@@ -13,5 +13,5 @@ def isEmpty(x: a): Bool with Empty[a] = Empty.isEmpty(x)
 @Test
 def testTypeClass(): Bool =
     let list = 1 :: 2 :: 3 :: Nil;
-    let emptyList = Nil;
+    let emptyList: List[Int32] = Nil;
     eq( isEmpty(list), false ) and eq( isEmpty(emptyList), true )
