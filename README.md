@@ -21,11 +21,11 @@ Flix 0.35.0 Ready! (Extension: 1.0.0) (Using /location/of/flix.jar)
 ```
 >The Flix commandline tool is **also** started ( see terminal tab ).
 
-Flix LSP Server / Commandline Tool
-----------------------------------
->The ```flix.jar``` commandline tool is 3 tools in one:
+Flix Jar
+--------
+>The ```flix.jar``` contains an/a:
 1. LSP server
-2. build tool
+2. build commandline tool
 3. repl
 >The repl can execute expressions such as: ```List.filterMap(s -> Int32.fromString(s), List#{"1", "2", "3", "four"}) |> List.sum```.
 >But ```let x = 1``` expressions fail.
@@ -39,7 +39,7 @@ function flix() {
 ```
 >Then, from the project root directory, enter: **flix** and return.
 
->The Flix LSP server is **auto** started when a Flix source file is selected.
+>The ```flix.jar``` is **auto** executed when a Flix source file is selected.
 ```
 Found `flix.toml'. Checking dependencies...
 Resolving Flix dependencies...
