@@ -17,7 +17,7 @@ Flix LSP
 Listen on 'localhost/127.0.0.1:8888'.
 Client at '/127.0.0.1:57961' connected.
                                                                                 
-Flix 0.35.0 Ready! (Extension: 1.0.0) (Using /location/of/flix.jar)
+Flix 0.36.0 Ready! (Extension: 1.0.0) (Using /location/of/flix.jar)
 ```
 >The Flix commandline tool is **also** started ( see terminal tab ).
 
@@ -39,7 +39,7 @@ function flix() {
 ```
 >Then, from the project root directory, enter: **flix** and return. Note the output and terminal tabs.
 
->Flix is **auto** started when a Flix source file is selected for first time in a new VSCode session.
+>As note above in the Flix LSP section, Flix is **auto** started when a Flix source file is selected for first time in a new VSCode session.
 
 >When the flix.toml is edited, a Flix restart dialog, reload: yes | no, is displayed.
 ```
