@@ -26,7 +26,8 @@ Flix Commandline Tool
 >The ```flix.jar``` commandline tool is 2 tools in one:
 1. build tool
 2. repl
->The repl can execute Flix expressions. But ```let x = 1``` expressions fail.
+>The repl can execute Flix expressions such as: ```List.filterMap(s -> Int32.fromString(s), List#{"1", "2", "3", "four"}) |> List.sum```.
+>But ```let x = 1``` expressions fail.
 
 >For manual startup, setup an environment file ( such as .bashrc, .zprofile, etc ) as follows:
 ```
