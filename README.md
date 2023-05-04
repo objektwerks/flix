@@ -23,10 +23,10 @@ Flix 0.35.0 Ready! (Extension: 1.0.0) (Using /location/of/flix.jar)
 
 Flix Commandline Tool
 ---------------------
->This commandline tool is 2 tools in one:
+>The ```flix.jar``` commandline tool is 2 tools in one:
 1. build tool
 2. repl
->I have not tested the repl beyond 1 + 1 and the like. But it doesn't appear to be a true repl.
+>The repl can execute Flix expressions. But ```let x = 1``` expressions fail.
 
 >For manual startup, setup an environment file ( such as .bashrc, .zprofile, etc ) as follows:
 ```
