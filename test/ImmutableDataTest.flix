@@ -1,5 +1,7 @@
 use Assert.eq
 
+def sum(xyz: { x = Int32, y = Int32, z =Int32 } ): Int32 = xyz.x + xyz.y + xyz.z
+
 @Test
 def testList(): Bool =
     use List.sum;
@@ -38,4 +40,4 @@ def testChain(): Bool =
 @Test
 def testRecord(): Bool =
     let record = { x = 1: Int32, y = 2: Int32, z = 3: Int32 };
-    eq( record.x + record.y + record.z, 6 )
+    eq( record.x + record.y + record.z, 6 ) and eq( sum(record), 6 )
