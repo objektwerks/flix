@@ -28,6 +28,8 @@ def testValidation(): Bool =
     let success = connect("luckyluke", "password12356789");
 
     debug( failure );
+    debug( Validation.toResult(failure) );
     debug( success );
+    debug( Validation.toResult(success) );
 
     true
