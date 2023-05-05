@@ -12,17 +12,21 @@ instance NonEmpty[List[a]] {
     pub def nonEmpty(list: List[a]): Bool = not List.isEmpty(list)
 }
 
-def nonEmpty(x: a): Bool with NonEmpty[a] = NonEmpty.nonEmpty(x)
+mod NonEmpty {
+    pub def isNonEmpty(x: a): Bool with NonEmpty[a] = NonEmpty.nonEmpty(x)
+}
 
 @Test
 def testTypeClass(): Bool =
+    use NonEmpty.isNonEmpty;
+    
     let string = "123";
     let emptyString = "";
 
     let list = 1 :: 2 :: 3 :: Nil;
     let emptyList: List[Int32] = Nil;
 
-    eq( nonEmpty(string), true ) and
-    eq( nonEmpty(emptyString), false ) and
-    eq( nonEmpty(list), true ) and
-    eq( nonEmpty(emptyList), false )
+    eq( true, isNonEmpty(string) ) and
+    eq( false, isNonEmpty(emptyString) ) and
+    eq( true, isNonEmpty(list) ) and
+    eq( false, isNonEmpty(emptyList) )
