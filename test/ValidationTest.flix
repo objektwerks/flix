@@ -34,7 +34,8 @@ def testValidation(): Bool =
     match Validation.toResult(fred) {
         case Ok(connection) => debug(connection)
         case Err(error) => debug(error)
-    }; */
+    };
+    */
 
     debug( barney );
     debug( Validation.toResult(barney) );
@@ -43,7 +44,8 @@ def testValidation(): Bool =
     match Validation.toResult(barney) {
         case Ok(connection) => debug(connection)
         case Err(error) => debug(error)
-    }; */
+    };
+    */
 
     // Question: What's the best, or idiomatic, way to work with a Validation[E, T]?
     // Test output:
