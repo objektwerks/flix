@@ -22,4 +22,9 @@ def connect(user: String, password: String): Validation[InvalidInput, Connection
     ) yield Connection.Connection(validatedUser, validatedPassword)
 
 @Test
-def testValidation(): Bool = true
+def testValidation(): Bool =
+    let failure = Failure( Nec#{InvalidUserName, InvalidPassword} );
+    let success = Success( Connection(luckyluke, password12356789) );
+
+    eq( failure, connect("Lucky Luke", "Ratata")) and
+    eq( success, connect("luckyluke", "password12356789"))
