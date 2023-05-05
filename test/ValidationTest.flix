@@ -24,13 +24,13 @@ def connect(user: String, pin: String): Validation[InvalidInput, Connection] =
 
 @Test
 def testValidation(): Bool =
-    let failure = connect("Fred", "12345678");
-    let success = connect("Barney", "1234567");
+    let fred = connect("Fred", "12345678");
+    let barney = connect("Barney", "1234567");
 
-    debug( failure );
-    debug( Validation.toResult(failure) );
+    debug( fred );
+    debug( Validation.toResult(fred) );
 
-    debug( success );
-    debug( Validation.toResult(success) );
+    debug( barney );
+    debug( Validation.toResult(barney) );
 
     true
