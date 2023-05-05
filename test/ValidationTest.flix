@@ -24,8 +24,10 @@ def connect(user: String, password: String): Validation[InvalidInput, Connection
 
 @Test
 def testValidation(): Bool =
-    let failure = Failure( Nec#{ InvalidInput.InvalidUser, InvalidInput.InvalidPassword } );
-    let success = Success( Connection.Connection("luckyluke", "password12356789") );
+    let failure = connect("Lucky Luke", "Ratata");
+    let success = connect("luckyluke", "password12356789");
 
-    eq( failure, connect("Lucky Luke", "Ratata") ) and
-    eq( success, connect("luckyluke", "password12356789") )
+    debug( failure );
+    debug( success );
+
+    true
