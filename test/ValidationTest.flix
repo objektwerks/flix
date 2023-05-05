@@ -29,8 +29,21 @@ def testValidation(): Bool =
 
     debug( fred );
     debug( Validation.toResult(fred) );
+    // Unable to unify the types 'Connection' and 'Nec[InvalidInput]'.
+    /*
+    match Validation.toResult(fred) {
+        case Ok(connection) => debug(connection)
+        case Err(error) => debug(error)
+    }; */
 
     debug( barney );
     debug( Validation.toResult(barney) );
+    // Unable to unify the types 'Connection' and 'Nec[InvalidInput]'.
+    /*
+    match Validation.toResult(barney) {
+        case Ok(connection) => debug(connection)
+        case Err(error) => debug(error)
+    }; */
 
+    // What's the best way to work with a Validation[E, T]?
     true
