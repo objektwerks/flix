@@ -37,5 +37,5 @@ def testChain(): Bool =
 
 @Test
 def testRecord(): Bool =
-    let record = { x = 1, y = 2, z = 3 };
+    let record = { x = 1: Int32, y = 2: Int32, z = 3: Int32 };
     eq( record.x + record.y + record.z, 6 )
