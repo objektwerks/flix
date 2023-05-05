@@ -29,6 +29,7 @@ def testValidation(): Bool =
 
     debug( failure );
     debug( Validation.toResult(failure) );
+    
     debug( success );
     debug( Validation.toResult(success) );
 
