@@ -1,6 +1,4 @@
 use Assert.eq
-use InvalidInput.{InvalidUser, InvalidPassword}
-use Connection.{Connection}
 use Validation.{Failure, Success}
 
 enum Connection(String, String)
@@ -22,12 +20,12 @@ def connect(user: String, password: String): Validation[InvalidInput, Connection
     forA (
         validatedUser     <- validateUser(user);
         validatedPassword <- validatePassword(password)
-    ) yield Connection(validatedUser, validatedPassword)
+    ) yield Connection.Connection(validatedUser, validatedPassword)
 
 @Test
 def testValidation(): Bool =
-    let failure = Failure(Nec#{InvalidUser, InvalidPassword});
-    let success = Success( Connection("luckyluke", "password12356789") );
+    let failure = Failure( Nec#{ InvalidInput.InvalidUser, InvalidInput.InvalidPassword } );
+    let success = Success( Connection.Connection("luckyluke", "password12356789") );
 
     eq( failure, connect("Lucky Luke", "Ratata") ) and
     eq( success, connect("luckyluke", "password12356789") )
