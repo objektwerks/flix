@@ -46,4 +46,14 @@ def testValidation(): Bool =
     }; */
 
     // What's the best way to work with a Validation[E, T]?
+    // Test output:
+    /*
+    Fred:
+        Failure(Nec(NecOne(InvalidUser), NecOne(InvalidPin)))                           
+        Err(Nec(NecOne(InvalidUser), NecOne(InvalidPin)))
+
+    Barney:
+        Success(Connection(Barney, 1234567))
+        Ok(Connection(Barney, 1234567))
+    */
     true
