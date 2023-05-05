@@ -1,18 +1,18 @@
 use Assert.eq
 
-pub class Empty[a] {
-    pub def isEmpty(x: a): Bool
+pub class NonEmpty[a] {
+    pub def nonEmpty(x: a): Bool
 }
 
-instance Empty[String] {
-    pub def isEmpty(string: String): Bool = String.length(string) == 0
+instance NonEmpty[String] {
+    pub def nonEmpty(string: String): Bool = not String.isEmpty(string)
 }
 
-instance Empty[List[a]] {
-    pub def isEmpty(list: List[a]): Bool = List.length(list) == 0
+instance NonEmpty[List[a]] {
+    pub def nonEmpty(list: List[a]): Bool = not List.isEmpty(list)
 }
 
-def isEmpty(x: a): Bool with Empty[a] = Empty.isEmpty(x)
+def nonEmpty(x: a): Bool with NonEmpty[a] = NonEmpty.nonEmpty(x)
 
 @Test
 def testTypeClass(): Bool =
@@ -22,7 +22,7 @@ def testTypeClass(): Bool =
     let list = 1 :: 2 :: 3 :: Nil;
     let emptyList: List[Int32] = Nil;
 
-    eq( isEmpty(string), false ) and
-    eq( isEmpty(emptyString), true ) and
-    eq( isEmpty(list), false ) and
-    eq( isEmpty(emptyList), true )
+    eq( nonEmpty(string), true ) and
+    eq( nonEmpty(emptyString), false ) and
+    eq( nonEmpty(list), true ) and
+    eq( nonEmpty(emptyList), false )
