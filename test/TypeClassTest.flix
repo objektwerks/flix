@@ -19,7 +19,7 @@ mod NonEmpty {
 @Test
 def testTypeClass(): Bool =
     use NonEmpty.isNonEmpty;
-    
+
     let string = "123";
     let emptyString = "";
 
