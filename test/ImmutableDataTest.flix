@@ -2,7 +2,9 @@ use Assert.eq
 
 type alias XyzRecord = {x = Int32, y = Int32, z = Int32}
 
-def sum(xyz: XyzRecord ): Int32 = xyz.x + xyz.y + xyz.z
+mod XyzRecord {
+    pub def sum(xyz: XyzRecord ): Int32 = xyz.x + xyz.y + xyz.z
+}
 
 @Test
 def testList(): Bool =
@@ -43,4 +45,4 @@ def testChain(): Bool =
 def testRecord(): Bool =
     let record = { x = 1: Int32, y = 2: Int32, z = 3: Int32 };
     let xyzRecord: XyzRecord  = { x = 1, y = 2, z = 3 };
-    eq( record.x + record.y + record.z, 6 ) and eq( sum(xyzRecord), 6 )
+    eq( record.x + record.y + record.z, 6 ) and eq( XyzRecord.sum(xyzRecord), 6 )
