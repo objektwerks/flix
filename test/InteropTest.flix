@@ -8,7 +8,7 @@ def testInterop(): Bool \ IO =
     import static java.nio.file.Files.exists(Path): Path \ IO;
 
     let path = Path.of("interop.txt");
-    let content  = "Hello, Flix!";
+    let content  = "Hello, Flix! This is Java!";
     Files.writeString(path, content);
 
     eq( true, Files.exists(path) )
