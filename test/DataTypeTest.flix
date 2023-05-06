@@ -19,6 +19,15 @@ type alias Age = Int32
 def toString(person: { first = First, last = Last, age = Age } ): String =
     "${person.first}, ${person.last}, ${person.age}"
 
+enum Person({first = String, last = String, age = Int32})
+
+instance Eq[Person] {
+    pub def eq(px: Person, py: Person): Bool = 
+        px.first == py.first and
+        px.last == py.last and
+        px.age == py.age
+}
+
 def matchByType(target: a): String = typematch target {
     case _: Int32   => "Int32"
     case _: String  => "String"
