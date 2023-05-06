@@ -1,7 +1,9 @@
 use Assert.eq
 use Validation.{Failure, Success}
 
-enum Connection(String, String) with Eq, ToString
+enum Connection with Eq, ToString {
+    case Connection({user = String, pin = String})
+}
 
 enum InvalidInput with Eq, ToString {
     case InvalidUser,
