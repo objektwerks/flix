@@ -22,6 +22,10 @@ def connect(user: String, pin: String): Validation[InvalidInput, Connection] =
         validatedPin  <- validatePin(pin)
     ) yield Connection.Connection(validatedUser, validatedPin)
 
+def handleConnection(message: String, connection: Connection): Unit \ IO = println("${message} ${connection}")
+
+def handleInvalidInput(message: String, invalidInput: Nec[InvalidInput]): Unit \ IO = println("${message} ${invalidInput}")
+
 @Test
 def testValidation(): Bool \ IO =
     let fred = connect("Fred", "12345678");
@@ -34,13 +38,13 @@ def testValidation(): Bool \ IO =
     debug( Validation.toResult(barney) );
 
     match Validation.toResult(fred) {
-        case Ok(connection) => println(connection)
-        case Err(invalidInput) => println("Invalid fred: ${invalidInput}")
+        case Ok(connection) => handleConnection("Valid fred:", connection)
+        case Err(invalidInput) => handleInvalidInput("Invalid fred:", invalidInput)
     };
 
     match Validation.toResult(barney) {
-        case Ok(connection) => println("Valid barney: ${connection}")
-        case Err(invalidInput) => println(invalidInput)
+        case Ok(connection) => handleConnection("Valid barney:", connection)
+        case Err(invalidInput) => handleInvalidInput("Invalid barney:", invalidInput)
     };
 
     eq( true, Result.isErr(Validation.toResult(fred)) ) and
