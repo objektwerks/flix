@@ -76,7 +76,7 @@ def testTypeAlias(): Bool =
 
 @Test
 def testPerson(): Bool =
-    let person = Person.Person( { first = "Fred", last = "Flintstone", age =28 } );
+    let person = Person.Person( { first = "Fred", last = "Flintstone", age = 28 } );
     let Person.Person(personCopy) = person;
     debug(personCopy);
     eq( "Fred", personCopy.first ) and
