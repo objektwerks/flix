@@ -1,4 +1,4 @@
-.txt
+*.txt
 artifact
 build
 lib
