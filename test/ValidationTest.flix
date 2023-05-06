@@ -29,17 +29,14 @@ def handleInvalidInput(message: String, invalidInput: Nec[InvalidInput]): Unit \
 @Test
 def testValidation(): Bool \ IO =
     let fred = connect("Fred", "12345678");
-    let barney = connect("Barney", "1234567");
-
     debug( fred );
-    debug( Validation.toResult(fred) );
     match Validation.toResult(fred) {
         case Ok(connection) => handleConnection("Valid fred:", connection)
         case Err(invalidInput) => handleInvalidInput("Invalid fred:", invalidInput)
     };
 
+    let barney = connect("Barney", "1234567");
     debug( barney );
-    debug( Validation.toResult(barney) );
     match Validation.toResult(barney) {
         case Ok(connection) => handleConnection("Valid barney:", connection)
         case Err(invalidInput) => handleInvalidInput("Invalid barney:", invalidInput)
