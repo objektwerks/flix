@@ -24,38 +24,24 @@ def connect(user: String, pin: String): Validation[InvalidInput, Connection] =
 
 @Test
 def testValidation(): Bool =
+    use Connection;
     let fred = connect("Fred", "12345678");
     let barney = connect("Barney", "1234567");
 
     debug( fred );
     debug( Validation.toResult(fred) );
-    // Error: Unable to unify the types 'Connection' and 'Nec[InvalidInput]'.
-    /*
-    match Validation.toResult(fred) {
-        case Ok(connection) => debug(connection)
-        case Err(error) => debug(error)
-    };
-    */
 
     debug( barney );
     debug( Validation.toResult(barney) );
-    // Error: Unable to unify the types 'Connection' and 'Nec[InvalidInput]'.
-    /*
-    match Validation.toResult(barney) {
-        case Ok(connection) => debug(connection)
-        case Err(error) => debug(error)
+
+    match Validation.toResult(fred) {
+        case Ok(Connection(user, pin)) => eq( "fred", user ) and eq( "12345678", pin )
+        case Err(invalidInput) => debug(invalidInput)
     };
-    */
 
-    // Question: What's the best, or idiomatic, way to work with a Validation[E, T]?
-    // Test output:
-    /*
-    Fred:
-        Failure(Nec(NecOne(InvalidUser), NecOne(InvalidPin)))                           
-        Err(Nec(NecOne(InvalidUser), NecOne(InvalidPin)))
-
-    Barney:
-        Success(Connection(Barney, 1234567))
-        Ok(Connection(Barney, 1234567))
-    */
+    match Validation.toResult(barney) {
+        case Ok(Connection(user, pin)) => eq( "barney", user ) and eq( "1234567", pin )
+        case Err(invalidInput) => debug(invalidInput)
+    };
+    
     true
