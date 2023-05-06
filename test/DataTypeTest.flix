@@ -73,3 +73,12 @@ def testEnum(): Bool =
 def testTypeAlias(): Bool =
     let person = { first = "Fred", last = "Flintstone", age = 30 };
     eq( toString(person), "Fred, Flintstone, 30" )
+
+@Test
+def testPerson(): Bool =
+    let person = Person.Person( { first = "Fred", last = "Flintstone", age =28 } );
+    let Person.Person(personCopy) = person;
+    debug(personCopy);
+    eq( "Fred", personCopy.first ) and
+    eq( "Flintstone", personCopy.last ) and
+    eq( 28, personCopy.age )
