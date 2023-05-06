@@ -17,7 +17,7 @@ type alias Last = String
 type alias Age = Int32
 
 def toString(person: { first = First, last = Last, age = Age } ): String =
-    "${person.first}, ${person.last}, ${person.age}"
+    "first: ${person.first}, last: ${person.last}, age: ${person.age}"
 
 enum Person {
     case Person({first = First, last = Last, age = Age})
