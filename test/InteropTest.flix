@@ -2,10 +2,13 @@ use Assert.eq
 
 @Test
 def testInterop(): Bool \ IO =
-    import new java.io.File(String): ##java.io.File \ IO as newFile;
-    import java.io.File.exists(): Bool \ IO as fileExists;
+    import java.nio.file.Path
+    import static java.nio.file.Path.of(String): Path \ IO
+    import static java.nio.file.Files.writeString(Path, String): Path \ IO
+    import static java.nio.file.Files.exists(Path): Path \ IO
 
-    let file = newFile("interop.txt");
-    let result = fileExists(file);
+    let path = Path.of("interop.txt");
+    let content  = "Hello, Flix!";
+    Files.writeString(path, content);
 
-    eq( true, result)
+    eq( true, Files.exists(path) )
