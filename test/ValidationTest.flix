@@ -42,6 +42,6 @@ def testValidation(): Bool \ IO =
         case Ok(connection) => println("Valid barney: ${connection}")
         case Err(invalidInput) => println(invalidInput)
     };
-    
+
     eq( true, Result.isErr(Validation.toResult(fred)) ) and
     eq( true, Result.isOk(Validation.toResult(barney)) )
