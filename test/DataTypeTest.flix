@@ -30,6 +30,12 @@ instance Eq[Person] {
         pa.first == pb.first and pa.last == pb.last and pa.age == pb.age
 }
 
+instance ToString[Person] {
+    pub def toString(p: Person): String =
+        let Person.Person(pa) = p;
+        "first: ${pa.first} last: ${pa.last} age: ${pa.age}"
+}
+
 def matchByType(target: a): String = typematch target {
     case _: Int32   => "Int32"
     case _: String  => "String"
