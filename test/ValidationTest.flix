@@ -33,15 +33,13 @@ def testValidation(): Bool \ IO =
 
     debug( fred );
     debug( Validation.toResult(fred) );
-
-    debug( barney );
-    debug( Validation.toResult(barney) );
-
     match Validation.toResult(fred) {
         case Ok(connection) => handleConnection("Valid fred:", connection)
         case Err(invalidInput) => handleInvalidInput("Invalid fred:", invalidInput)
     };
 
+    debug( barney );
+    debug( Validation.toResult(barney) );
     match Validation.toResult(barney) {
         case Ok(connection) => handleConnection("Valid barney:", connection)
         case Err(invalidInput) => handleInvalidInput("Invalid barney:", invalidInput)
