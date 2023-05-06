@@ -26,6 +26,12 @@ def matchByType(target: a): String = typematch target {
 }
 
 @Test
+def testTypematch(): Bool =
+    eq( "Int32", matchByType(1) ) and 
+    eq( "String", matchByType("1") ) and
+    eq( "Unknown", matchByType('a') )
+
+@Test
 def testLazy(): Bool =
     let x: Lazy[Int32] = lazy (1 + 2);
     let y: Int32 = force x;
