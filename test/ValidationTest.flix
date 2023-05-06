@@ -35,11 +35,11 @@ def testValidation(): Bool \ IO =
 
     match Validation.toResult(fred) {
         case Ok(connection) => println(connection)
-        case Err(invalidInput) => println(invalidInput)
+        case Err(invalidInput) => println("Invalid fred: ${invalidInput}")
     };
 
     match Validation.toResult(barney) {
-        case Ok(connection) => println(connection)
+        case Ok(connection) => println("Valid barney: ${connection}")
         case Err(invalidInput) => println(invalidInput)
     };
     
