@@ -43,4 +43,5 @@ def testValidation(): Bool \ IO =
         case Err(invalidInput) => println(invalidInput)
     };
     
-    true
+    eq( true, Result.isErr(Validation.toResult(fred)) ) and
+    eq( true, Result.isOk(Validation.toResult(barney)) )
