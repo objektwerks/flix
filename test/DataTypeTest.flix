@@ -19,13 +19,15 @@ type alias Age = Int32
 def toString(person: { first = First, last = Last, age = Age } ): String =
     "${person.first}, ${person.last}, ${person.age}"
 
-enum Person({first = String, last = String, age = Int32})
+enum Person {
+    case Person({first = String, last = String, age = Int32})
+}
 
 instance Eq[Person] {
-    pub def eq(px: Person, py: Person): Bool = 
-        px.first == py.first and
-        px.last == py.last and
-        px.age == py.age
+    pub def eq(x: Person, y: Person): Bool =
+        let Person.Person(r1) = x;
+        let Person.Person(r2) = y;
+        r1.first == r2.first and r1.last == r2.last and r1.age == r1.age
 }
 
 def matchByType(target: a): String = typematch target {
