@@ -1,6 +1,4 @@
-.*
 .txt
-!.gitignore
 artifact
 build
 lib
