@@ -20,6 +20,12 @@ def toString(person: { first = First, last = Last, age = Age } ): String =
     "${person.first}, ${person.last}, ${person.age}"
 
 @Test
+def testLazy(): Bool =
+    let x: Lazy[Int32] = lazy (1 + 2);
+    let y: Int32 = force x;
+    eq( 3, y)
+
+@Test
 def testTuple(): Bool =
     let tuple = (1, 2, 3);
     let (one, two, three) = tuple;
