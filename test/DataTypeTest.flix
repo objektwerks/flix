@@ -20,14 +20,14 @@ def toString(person: { first = First, last = Last, age = Age } ): String =
     "${person.first}, ${person.last}, ${person.age}"
 
 enum Person {
-    case Person({first = String, last = String, age = Int32})
+    case Person({first = First, last = Last, age = Age})
 }
 
 instance Eq[Person] {
-    pub def eq(x: Person, y: Person): Bool =
-        let Person.Person(r1) = x;
-        let Person.Person(r2) = y;
-        r1.first == r2.first and r1.last == r2.last and r1.age == r1.age
+    pub def eq(px: Person, py: Person): Bool =
+        let Person.Person(pa) = px;
+        let Person.Person(pb) = py;
+        pa.first == pb.first and pa.last == pb.last and pa.age == pb.age
 }
 
 def matchByType(target: a): String = typematch target {
