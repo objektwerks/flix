@@ -19,6 +19,12 @@ type alias Age = Int32
 def toString(person: { first = First, last = Last, age = Age } ): String =
     "${person.first}, ${person.last}, ${person.age}"
 
+def matchByType(target: a): String = typematch target {
+    case _: Int32   => "Int32"
+    case _: String  => "String"
+    case _: _       => "Unknown"
+}
+
 @Test
 def testLazy(): Bool =
     let x: Lazy[Int32] = lazy (1 + 2);
