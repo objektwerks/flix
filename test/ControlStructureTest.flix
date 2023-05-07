@@ -64,7 +64,7 @@ def testResult(): Bool \ IO =
             (totalLines, totalWords)
         };
     match result {
-        case Ok((lines, words)) => eq( lines, 201 ) and eq( words, 1581 )
+        case Ok((lines, words)) => eq( 201, lines ) and eq( 1581, words )
         case Err(message) => debug(message); false
     }
 
