@@ -11,3 +11,6 @@ def testRecursion(): Bool =
 
 @Test
 def testFactorial(): Bool = eq( 6, factorial(3, 1) )
+
+@Test
+def testFibonacci(): Bool = eq( 8, fibonacci(6, 0, 1) )
