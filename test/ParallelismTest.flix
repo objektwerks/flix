@@ -14,4 +14,4 @@ def testParYield(): Bool =
             x <- factorial(3, 1);
             y <- factorial(6, 1))
         yield x + y;
-    eq( result, 726)
+    eq( 726, result )
