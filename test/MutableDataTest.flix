@@ -40,7 +40,7 @@ def testMutList(): Bool =
             MutList.push!(1) !> 
             MutList.push!(2) !>
             MutList.push!(3);
-        eq( numbers |> sum, 6 )
+        eq( 6, numbers |> sum )
     }
 
 @Test
