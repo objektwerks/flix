@@ -42,7 +42,7 @@ def testApplicativeForYield(): Bool =
     let optionX = Some(1);
     let optionY = Some(2);
     let result = forA(x <- optionX; y <- optionY) yield x + y;
-    eq( result, Some(3) )
+    eq( Some(3), result )
 
 @Test
 def testOption(): Bool =
