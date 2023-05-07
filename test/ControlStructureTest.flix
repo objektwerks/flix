@@ -10,10 +10,10 @@ def testIfElse(): Bool =
 @Test
 def testRecursion(): Bool =
     let list = List#{1, 2, 3};
-    eq( factorial(3, 1), 6 ) and
-    eq( fibonacci(6, 0, 1), 8 ) and
-    eq( product(list, 1), 6 ) and
-    eq( sum(list, 0), 6 )
+    eq( 6, factorial(3, 1) ) and
+    eq( 8, fibonacci(6, 0, 1) ) and
+    eq( 6, product(list, 1) ) and
+    eq( 6, sum(list, 0) )
 
 @Test
 def testForeachYield(): Bool =
