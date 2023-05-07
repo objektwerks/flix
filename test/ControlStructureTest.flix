@@ -19,7 +19,7 @@ def testRecursion(): Bool =
 def testForeachYield(): Bool =
     let list = List#{1, 2, 3};
     let result: List[Int32] = foreach(number <- list) yield number + 1;
-    eq( result, List#{2, 3, 4} )
+    eq( List#{2, 3, 4}, result )
 
 @Test
 def testMonadicForYield(): Bool =
