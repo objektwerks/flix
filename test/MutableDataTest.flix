@@ -11,7 +11,7 @@ def sort(l: List[a]): List[a] with Order[a] =
 def testRegion(): Bool =
     let list = List#{3, 2, 1};
     let sortedList = sort(list);
-    eq( sortedList, List#{1, 2, 3} )
+    eq( List#{1, 2, 3}, sortedList )
 
 @Test
 def testReference(): Bool =
