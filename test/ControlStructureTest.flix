@@ -49,7 +49,8 @@ def testOption(): Bool =
     // Scala: val result = List("1", "2", "3", "four").flatMap(_.toIntOption).sum
     let result = List.filterMap(s -> Int32.fromString(s), List#{"1", "2", "3", "four"}) |> List.sum;
     let anotherResult = List.sumWith(s -> Int32.fromString(s) |> Option.getWithDefault(0), List#{"1", "2", "3", "four"});
-    eq( result, 6 ) and eq( anotherResult, 6 )
+    eq( 6, result ) and
+    eq( 6, anotherResult )
 
 @Test
 def testResult(): Bool \ IO =
