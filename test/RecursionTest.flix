@@ -14,3 +14,6 @@ def testFactorial(): Bool = eq( 6, factorial(3, 1) )
 
 @Test
 def testFibonacci(): Bool = eq( 8, fibonacci(6, 0, 1) )
+
+@Test
+def testProduct(): Bool = eq( 6, product(List#{1, 2, 3}, 1) )
