@@ -5,7 +5,7 @@ use Recursion.{factorial, fibonacci, product, sum}
 def testIfElse(): Bool =
     let number = 2;
     let result = if (Int32.mod(number, 2) == 0) true else false;
-    eq( result, true )
+    eq( true, result )
 
 @Test
 def testRecursion(): Bool =
