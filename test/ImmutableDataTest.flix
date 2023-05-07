@@ -25,9 +25,9 @@ def testMap(): Bool =
     let keysSum = sumKeys(map);
     let valuesSum = sumValues(map);
     let modifiedMap = insert(4, 4, map);
-    eq( keysSum, valuesSum ) and
-    eq( get(1, map), Some(1) ) and
-    eq( get(4, modifiedMap), Some(4) )
+    eq( valuesSum, keysSum ) and
+    eq( Some(1), get(1, map) ) and
+    eq( Some(4), get(4, modifiedMap) )
 
 @Test
 def testVector(): Bool =
