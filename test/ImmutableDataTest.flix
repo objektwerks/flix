@@ -39,7 +39,7 @@ def testVector(): Bool =
 def testChain(): Bool =
     use Chain.sum;
     let chain = Chain.cons(1, Chain.empty());
-    eq( chain |> sum, 1 )
+    eq( 1, chain |> sum )
 
 @Test
 def testRecord(): Bool =
