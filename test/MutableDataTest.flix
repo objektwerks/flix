@@ -20,7 +20,7 @@ def testReference(): Bool =
         counter := (deref counter) + 1;
         counter := (deref counter) + 1;
         counter := (deref counter) + 1;
-        eq( deref counter, 3 )
+        eq( 3, deref counter )
     }
 
 @Test
