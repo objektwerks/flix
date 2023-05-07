@@ -58,7 +58,7 @@ def testLazy(): Bool =
 def testTuple(): Bool =
     let tuple = (1, 2, 3);
     let (one, two, three) = tuple;
-    eq( one + two + three, 6 )
+    eq( 6, one + two + three )
 
 @Test
 def testEnum(): Bool =
