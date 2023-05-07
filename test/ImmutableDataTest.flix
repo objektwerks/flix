@@ -10,7 +10,7 @@ mod XyzRecord {
 def testList(): Bool =
     use List.sum;
     let list = List#{1, 2, 3};
-    eq( list |> sum, 6 )
+    eq( 6, list |> sum )
 
 @Test
 def testSet(): Bool =
