@@ -52,5 +52,5 @@ def testMutSet(): Bool =
             MutSet.add!(1) !> 
             MutSet.add!(2) !>
             MutSet.add!(3);
-        eq( numbers |> sum, 6 )
+        eq( 6, numbers |> sum )
     }
