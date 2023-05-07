@@ -45,4 +45,5 @@ def testChain(): Bool =
 def testRecord(): Bool =
     let record = { x = 1: Int32, y = 2: Int32, z = 3: Int32 };
     let xyzRecord: XyzRecord  = { x = 1, y = 2, z = 3 };
-    eq( record.x + record.y + record.z, 6 ) and eq( XyzRecord.sum(xyzRecord), 6 )
+    eq( 6, record.x + record.y + record.z ) and
+    eq( 6, XyzRecord.sum(xyzRecord) )
