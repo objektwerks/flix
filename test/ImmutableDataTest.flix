@@ -33,7 +33,7 @@ def testMap(): Bool =
 def testVector(): Bool =
     use Vector.sum;
     let vector = Vector#{1, 2, 3};
-    eq( vector |> sum, 6 )
+    eq( 6, vector |> sum )
 
 @Test
 def testChain(): Bool =
