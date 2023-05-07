@@ -16,7 +16,7 @@ def testList(): Bool =
 def testSet(): Bool =
     use Set.sum;
     let set = Set#{1, 2, 3};
-    eq( set |> sum, 6 )
+    eq( 6, set |> sum )
 
 @Test
 def testMap(): Bool =
