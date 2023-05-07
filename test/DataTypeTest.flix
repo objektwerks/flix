@@ -65,9 +65,9 @@ def testEnum(): Bool =
     let red = Color.Red(1);
     let white = Color.White(2);
     let blue = Color.Blue(3);
-    eq( valueOf(red), 2 ) and
-    eq( valueOf(white), 4 ) and
-    eq( valueOf(blue), 6 )
+    eq( 2, valueOf(red) ) and
+    eq( 4, valueOf(white) ) and
+    eq( 6, valueOf(blue) )
 
 @Test
 def testTypeAlias(): Bool =
