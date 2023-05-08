@@ -11,7 +11,7 @@ mod NonEmpty {
         pub def nonEmpty(list: List[a]): Bool = not List.isEmpty(list)
     }
 
-    // It's critical this method name is different from the type class method name.
-    // Otherwise Flix will enter into an infinite loop during test execution.
+    // It's critical this method name is different from the type class method
+    // name. Otherwise Flix will enter into an infinite loop during execution.
     pub def isNonEmpty(x: a): Bool with NonEmpty[a] = NonEmpty.nonEmpty(x)
 }
