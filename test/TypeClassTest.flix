@@ -1,9 +1,8 @@
-use Assert.eq
-use NonEmpty.isNonEmpty;
-
-
 @Test
 def testTypeClass(): Bool =
+    use Assert.eq;
+    use NonEmpty.isNonEmpty;
+
     let string = "123";
     let emptyString = "";
 
