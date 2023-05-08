@@ -1,30 +1,5 @@
 use Assert.eq
-use Validation.{Failure, Success}
-
-enum Connection(String, String) with Eq, ToString
-
-enum InvalidInput with Eq, ToString {
-    case InvalidUser,
-    case InvalidPin
-}
-
-def validateUser(user: String): Validation[InvalidInput, String] =
-    if ( String.length(user) > 4 and String.forAll(Char.isLetter, user) ) Success(user)
-    else Failure(Nec.singleton(InvalidInput.InvalidUser))
-
-def validatePin(pin: String): Validation[InvalidInput, String] =
-    if ( String.length(pin) == 7 ) Success(pin)
-    else Failure(Nec.singleton(InvalidInput.InvalidPin))
-
-def connect(user: String, pin: String): Validation[InvalidInput, Connection] = 
-    forA (
-        validatedUser <- validateUser(user);
-        validatedPin  <- validatePin(pin)
-    ) yield Connection.Connection(validatedUser, validatedPin)
-
-def handleConnection(message: String, connection: Connection): Unit \ IO = println("${message} ${connection}")
-
-def handleInvalidInput(message: String, invalidInput: Nec[InvalidInput]): Unit \ IO = println("${message} ${invalidInput}")
+use Connection.{connect, handleConnection, handleInvalidInput}
 
 @Test
 def testValidation(): Bool \ IO =
