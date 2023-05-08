@@ -1,5 +1,7 @@
 use Assert.eq
 
+def numberOfWords(s: String): Int32 = s |> String.words |> List.length
+
 @Test
 def testIfElse(): Bool =
     let number = 2;
@@ -58,5 +60,3 @@ def testResult(): Bool \ IO =
         case Ok((lines, words)) => eq( 201, lines ) and eq( 1581, words )
         case Err(message) => debug(message); false
     }
-
-def numberOfWords(s: String): Int32 = s |> String.words |> List.length
