@@ -19,4 +19,7 @@ mod Person {
             let Person.Person(pa) = p;
             "first: ${pa.first} last: ${pa.last} age: ${pa.age}"
     }
+
+    pub def toString(person: { first = First, last = Last, age = Age } ): String =
+        "first: ${person.first}, last: ${person.last}, age: ${person.age}"
 }

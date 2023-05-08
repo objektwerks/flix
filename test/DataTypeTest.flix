@@ -1,9 +1,6 @@
 use Assert.eq
 use Color.{Color, valueOf}
-use Person.{Person, First, Last, Age}
-
-def toString(person: { first = First, last = Last, age = Age } ): String =
-    "first: ${person.first}, last: ${person.last}, age: ${person.age}"
+use Person.{Person, toString}
 
 def matchByType(target: a): String = typematch target {
     case _: Int32   => "Int32"
