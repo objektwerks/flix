@@ -3,7 +3,7 @@ mod Person {
     pub type alias Last = String
     pub type alias Age = Int32
 
-    enum Person {
+    pub enum Person {
         case Person({first = First, last = Last, age = Age})
     }
 

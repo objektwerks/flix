@@ -1,17 +1,6 @@
 use Assert.eq
+use Color.{Color, valueOf}
 use Person.{Person, First, Last, Age}
-
-enum Color {
-    case Red(Int32)
-    case White(Int32)
-    case Blue(Int32)
-}
-
-def valueOf(color: Color): Int32 = match color {
-    case Color.Red(i) => i * 2
-    case Color.White(i) => i * 2
-    case Color.Blue(i) => i * 2
-}
 
 def toString(person: { first = First, last = Last, age = Age } ): String =
     "first: ${person.first}, last: ${person.last}, age: ${person.age}"
