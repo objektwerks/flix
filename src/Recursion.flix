@@ -19,12 +19,6 @@ mod Recursion {
         case head :: tail => sum(tail, acc + head)
     }
 
-    /*
-    def reverse[A](list: List[A], acc: List[A] = List.empty[A]): List[A] = list match
-        case Nil => acc
-        case head :: tail => reverse(tail, head :: acc)
-    */
-
     pub def reverse(ys: List[a], acc: List[a]): List[a] = match ys {
         case Nil => acc
         case head :: tail => reverse(tail, head :: acc)
