@@ -1,5 +1,3 @@
-use Assert.eq
-
 def fileLineCount(file: String): Int32 \ IO =
     let result = 
         for (
@@ -12,6 +10,8 @@ def fileLineCount(file: String): Int32 \ IO =
 
 @Test
 def testStructuredConcurrency(): Bool \ IO =
+    use Assert.eq;
+
     let (license, flix) = region rc {
         let (licenseSender, licenseReceiver) = Channel.buffered(rc, 1);
         let (flixSender, flixReceiver) = Channel.buffered(rc, 1);
