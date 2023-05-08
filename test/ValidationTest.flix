@@ -1,8 +1,8 @@
-use Assert.eq
-use Connection.{connect, handleConnection, handleInvalidInput}
-
 @Test
 def testValidation(): Bool \ IO =
+    use Assert.eq;
+    use Connection.{connect, handleConnection, handleInvalidInput};
+
     let fred = connect("Fred", "12345678");
     debug( fred );
     match Validation.toResult(fred) {
