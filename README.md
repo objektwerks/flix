@@ -10,6 +10,7 @@ Review
 1. **Build Tool** - finish implementing commands; and add **:run**.
 2. **Java Interop** - finish implementing imports and simplify.
 3. **Record** - enhance with Eq, Order, ToString and pattern matching.
+4. **Worksheets** - consider building this feature.
 
 VScode
 ------
