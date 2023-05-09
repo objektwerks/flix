@@ -2,6 +2,15 @@ Flix
 ----
 >Flix feature tests.
 
+Review
+------
+>Flix in an FP language that runs on the JVM. See [Flix Language](https://flix.dev/) for details.
+
+>Flix needs to improve in the following areas:
+1. Build Tool
+2. Java Interop
+3. Case Class
+
 VScode
 ------
 >Install Flix extension: https://marketplace.visualstudio.com/items?itemName=flix.flix
