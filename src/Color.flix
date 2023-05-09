@@ -1,5 +1,5 @@
 mod Color {
-    pub enum Color {
+    pub enum Color with Eq, Order, ToString {
         case Red(Int32)
         case White(Int32)
         case Blue(Int32)
