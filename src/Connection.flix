@@ -1,9 +1,9 @@
 mod Connection {
     use Validation.{Failure, Success}
 
-    pub enum Connection(String, String) with Eq, ToString
+    pub enum Connection(String, String) with Eq, Order, ToString
 
-    pub enum InvalidInput with Eq, ToString {
+    pub enum InvalidInput with Eq, Order, ToString {
         case InvalidUser,
         case InvalidPin
     }
