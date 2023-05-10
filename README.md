@@ -11,6 +11,7 @@ Review
 2. **Java Interop** - finish implementing imports and simplify.
 3. **Record** - enhance with Eq, Order, ToString and pattern matching.
 4. **Worksheets** - consider building this feature.
+5. **Semicolons** - consider removing semicolons, favoring a true expression-oriented language.
 
 VScode
 ------
