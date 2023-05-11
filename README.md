@@ -7,7 +7,7 @@ Review
 >Flix in an FP language that runs on the JVM. See [Flix Language](https://flix.dev/) for details.
 
 >Flix could improve in the following areas:
-1. **Build Tool** - finish implementing commands; and add **:run**.
+1. **Build Tool** - finish implementing commands; and add **:run** command.
 2. **Java Interop** - finish implementing imports and simplify.
 3. **Record** - enhance with Eq, ToString and pattern matching, akin to a Scala case class, Kotlin data class or Java record.
 4. **Worksheets** - consider building worksheets for fast prototyping.
