@@ -4,7 +4,7 @@ Flix
 
 Review
 ------
->Flix in an FP language that runs on the JVM. See [Flix Language](https://flix.dev/) for details.
+>Flix is an FP language that executes on the JVM. See [Flix Language](https://flix.dev/) for details.
 
 >Flix could improve in the following areas:
 1. **Build Tool** - finish implementing commands; and add **:run** command.
